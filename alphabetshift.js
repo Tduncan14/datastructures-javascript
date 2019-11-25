@@ -2,33 +2,46 @@
 function alphabetShift(word){
 
 
-const alphabet = ['a','b','c','d','e', 'f','g']
+let alphabet = ['a','b','c','d','e', 'f','g']
+
+// another option
+
+
+alphabet = {
+    'a':'b',
+    'b':'c',
+    'c':'d',
+    'e':'f',
+    'f':'g'
+}
 
 
 let inputShift = word.split('');
 
+console.log(inputShift,'outside the forloop')
+
 for(let i = 0; i < inputShift.length; i++){
 
-  let index = 0;
+    console.log(inputShift[i])
 
-  if(inputShift[i] !== 'z'){
+    inputShift[i] = alphabet[inputShift[i]]
+//   let index = 0;
 
-  index = alphabet.indexOf(inputShift[i])+ 1
+//   if(inputShift[i] !== 'z'){
+
+ 
+// //   index = alphabet.indexOf(inputShift[i])+ 1
 
   }
 
-  inputShift[i] = alphabet[index]
-
+   return inputShift.join('')
 
 
 
 }
 
 
-   
- return inputShift.join('');
 
-}
 
 
 
